@@ -1,0 +1,10 @@
+{% extends 'base_site.html' %}
+
+{% block maincontent %}
+<form method="post" action="">{% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} <input  type="text" name="title" /> {% endcomment %}
+    <input type="submit" name="submit" value="Submit" />
+</form>
+
+{% endblock maincontent %}
